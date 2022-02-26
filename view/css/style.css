@@ -1,0 +1,131 @@
+.input-field .prefix {
+    color: #d2d2d2;
+}
+
+html {
+    background: #27292d;
+}
+
+.mainForm {
+    position: absolute;
+    top: calc(50% - 137px);
+    padding: 10px;
+    margin: 10px;
+    padding-top: 30px;
+}
+
+input {
+    color: #d2d2d2 !important;
+}
+
+.btn {
+    background-color: #1f2023 !important;
+    color: #d2d2d2;
+}
+
+.header {
+    height: 70px;
+    background: #1f2023;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header p {
+    color: #53555b;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.header i {
+    color: #53555b;
+    cursor: pointer;
+}
+
+span {
+    color: #48547f;
+}
+
+h3 {
+    color: #a0a0a1;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.space {
+    margin: 15px;
+}
+
+.managerCard,
+.vendorCard {
+    display: flex;
+    align-items: center;
+    background: #27292d;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    padding: 10px;
+    justify-content: space-between;
+    border-radius: 5;
+}
+
+.managerCard p,
+.vendorCard p {
+    color: #e8e8e8;
+    font-size: 14px;
+}
+
+.managerCard i,
+.vendorCard i {
+    color: #ababab;
+    cursor: pointer;
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    height: 400px;
+    top: calc(50% - 200px);
+    left: 10%;
+    width: 80%;
+    background: #1f2023;
+    z-index: 999999;
+    padding: 40px 10px 40px 10px;
+    border: 1px solid #3f3e3e;
+    border-radius: 5px;
+}
+
+.exitButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.exitButton i {
+    color: #ababab;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000000a6;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+}
+
+@media (min-width: 1000px) {
+    .mainForm {
+        width: 400px;
+        left: calc(50% - 200px);
+        border: 1px solid #2D2F34;
+    }
+    .popup {
+        width: 400px;
+        left: calc(50% - 200px);
+    }
+}

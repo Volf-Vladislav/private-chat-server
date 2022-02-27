@@ -54,7 +54,7 @@ class ReportController {
                     user.reports = 0
                     return res.json({ message: 'false'})
                 }
-                res.json({ message: 'true', reason: user.banReason, time: user.banTime })
+                else res.json({ message: 'true', reason: user.banReason, time: user.banTime })
             }
             else {
                 res.json({ message: 'false' })

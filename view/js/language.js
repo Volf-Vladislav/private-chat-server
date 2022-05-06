@@ -27,7 +27,7 @@ function createLanguage() {
     const controllers = document.querySelector('.controllers')
 
     languageTitle.innerHTML += input('Язык', 'titleKey')
-    languageTitle.innerHTML += input('Кратное название', 'shortKey')
+    languageTitle.innerHTML += input('Краткое название', 'shortKey')
     languageTitle.innerHTML += input('Перевод языка', 'nameKey')
 
     languageHeader.innerHTML += input('Чат', 'chatKey')

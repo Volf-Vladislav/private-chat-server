@@ -16,11 +16,12 @@ class LanguageContoller {
 
     async getTranslate(req, res) {
         try {
-            const name = req.body.name
+            const short = req.body.short
 
-            const language = await Language.findOne({ name: name })
+            const language = await Language.findOne({ short: short })
+            
             if (!language) {
-                const defaultLanguage = await Language.findOne({ name: 'English' })
+                const defaultLanguage = await Language.findOne({ short: 'en-US' })
                 return res.json({ language: defaultLanguage })
             }
             res.json({ language })

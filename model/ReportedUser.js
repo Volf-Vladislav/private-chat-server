@@ -11,6 +11,7 @@ const ReportedUser = new Schema({
     },
     banReason: {
         type: String,
+        default: 'Спам'
     },
     banTime: {
         type: String,

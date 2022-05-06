@@ -3,10 +3,32 @@ html {
 }
 
 .header {
+    height: 70px;
+    background: #1f2023;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 10px 20%;
     align-items: center;
-    padding: 10px;
+}
+
+.header a {
+    color: #53555b;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.header p {
+    color: #d2d2d2;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.addCard i {
+    font-size: 80px;
+    color: rgb(204, 87, 87);
 }
 
 .name {
@@ -22,7 +44,8 @@ html {
 }
 
 .name p, .name i {
-    color: #d2d2d2;
+    color: #53555b;
+    cursor: pointer;
 }
 
 .content {

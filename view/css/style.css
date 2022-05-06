@@ -23,26 +23,6 @@ input {
     color: #d2d2d2;
 }
 
-.header {
-    height: 70px;
-    background: #1f2023;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.header p {
-    color: #53555b;
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.header i {
-    color: #53555b;
-    cursor: pointer;
-}
-
 span {
     color: #48547f;
 }

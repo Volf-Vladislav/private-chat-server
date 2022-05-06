@@ -1,14 +1,17 @@
 import { readCookie } from './readCookie.js'
 import { rootUrl } from './rootUrl.js'
 
-export async function postBan(userIP, reason, time) {
-    const url = rootUrl + '/api/report/banuser'
+export async function postNewLanguage(title, short, name, contacts, rules, chat) {
+    const url = rootUrl + '/api/language/createLanguage'
     const token = readCookie('token')
 
     const data = {
-        userIP: userIP,
-        reason: reason,
-        time: time
+        title: title,
+        short: short,
+        name: name,
+        contacts: contacts,
+        rules: rules,
+        chat: chat
     }
 
     try {

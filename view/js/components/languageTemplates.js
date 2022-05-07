@@ -20,7 +20,7 @@ export function input(title, key) {
     return `
         <div class="languageInput">
             <p>${title}</p>
-            <input id="${key}" value="test" type="text">
+            <input id="${key}" type="text">
         </div>
     `
 }
@@ -29,7 +29,7 @@ export function textArea(title, key) {
     return `
         <div class="languageInput">
             <p>${title}</p>
-            <textarea cols="40" rows="5" id="${key}">value=test</textarea>
+            <textarea cols="40" rows="5" id="${key}"></textarea>
         </div>
     `
 }

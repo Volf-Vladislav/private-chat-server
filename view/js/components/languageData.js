@@ -65,7 +65,7 @@ export const languageData = {
         type: 'area',
     },
     {
-        value: 'Функция анонимного чата имеет следующие преимущества:',
+        value: 'Функция анонимного чата имеет следующие преимущества',
         key: 'innerTitle',
         type: 'area',
     },
@@ -121,28 +121,28 @@ export const languageData = {
         type: 'area',
     },
     {
-        value: 'Наш e-mail:',
+        value: 'Наш e-mail',
         key: 'email',
         type: 'input',
     },
 
     {
-        value: 'Ваше имя:',
+        value: 'Ваше имя',
         key: 'name',
         type: 'input',
     },
     {
-        value: 'Тема обращения:',
+        value: 'Тема обращения',
         key: 'purpose',
         type: 'input',
     },
     {
-        value: 'Ваше сообщение:',
+        value: 'Ваше сообщение',
         key: 'message',
         type: 'input',
     },
     {
-        value: 'Отправить:',
+        value: 'Отправить',
         key: 'send',
         type: 'input',
     }],

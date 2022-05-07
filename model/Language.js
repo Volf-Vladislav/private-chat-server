@@ -90,28 +90,6 @@ const Language = new Schema({
         },
     },
     contactsBlock: {
-        title: {
-            type: String,
-            required: true,
-        },
-        innerTitle: {
-            type: String,
-            required: true,
-        },
-        text1: {
-            type: String,
-            required: true,
-        },
-        text2: {
-            type: String,
-            required: true,
-        },
-        text3: {
-            type: String,
-            required: true,
-        },
-    },
-    contactsBlock: {
         contact: {
             type: String,
             required: true,

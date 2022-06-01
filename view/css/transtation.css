@@ -22,7 +22,8 @@ p {
 .innerHeader p,
 .advantages p,
 .features p,
-.contactsBlock p {
+.languageMeta p .contactsBlock p,
+.chatBlock p {
     color: #d2d2d2e1;
     padding-bottom: 10px;
     padding-right: 10px;
@@ -60,7 +61,8 @@ input {
 .innerHeader,
 .advantages,
 .features,
-.rulesBlock {
+.rulesBlock,
+.chatBlock {
     background: #27292d;
     padding: 10px 20px;
 }
@@ -100,4 +102,38 @@ input {
 
 .contactsBlock .languageInput {
     width: 45%;
+}
+
+.languageMeta {
+    display: block;
+    padding: 10px 20px;
+    background: #27292d;
+}
+
+.languageMeta div {
+    width: 100%;
+}
+
+.languageMeta div input {
+    width: 80% !important;
+    margin-left: 10px;
+}
+
+.languageMeta div p {
+    width: 10%;
+}
+
+.chatBlock {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatBlock div {
+    width: 30%;
+}
+
+.contactsBlock div input {
+    margin-left: 10px !important;
 }

@@ -1,6 +1,6 @@
-export function template(title, short, name) {
+export function template(title, short, name, id) {
     return `
-        <div class="card">
+        <div class="card" id=${id}>
             <p>Язык <span>${title}</span></p>
             <p>Краткое название <span>${short}</span></p>
             <p>Перевод <span>${name}</span></p>
@@ -41,6 +41,10 @@ export function container() {
             <div class="languageTitle"></div>
         </div>
         <div class="settingsBlock">
+            <p class="title">Мета теги</p>
+            <div class="languageMeta"></div>
+        </div>
+        <div class="settingsBlock">
             <p class="title">Шапка сайта</p>
             <div class="languageHeader"></div>
         </div>
@@ -64,6 +68,10 @@ export function container() {
         <div class="settingsBlock">
             <p class="title">Блок с правилами</p>
             <div class="rulesBlock"></div>
+        </div>
+        <div class="settingsBlock">
+            <p class="title">Перевод чата</p>
+            <div class="chatBlock"></div>
         </div>
         <div class="settingsBlock">
             <div class="controllers"></div>

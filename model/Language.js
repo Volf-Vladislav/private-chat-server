@@ -13,6 +13,18 @@ const Language = new Schema({
         type: String,
         required: true,
     },
+    description: {
+        type: String,
+        required: true,
+    },
+    chatTitle: {
+        type: String,
+        required: true,
+    },
+    keywords: {
+        type: String,
+        required: true,
+    },
     header: {
         contacts: {
             type: String,
@@ -121,6 +133,56 @@ const Language = new Schema({
     },
     rulesBlock: {
         content: {
+            type: String,
+            required: true,
+        }
+    },
+    chatBlock: {
+        exit: {
+            type: String,
+            required: true,
+        },
+        userGender: {
+            type: String,
+            required: true,
+        },
+        penPalGender: {
+            type: String,
+            required: true,
+        },
+        any: {
+            type: String,
+            required: true,
+        },
+        male: {
+            type: String,
+            required: true,
+        },
+        female: {
+            type: String,
+            required: true,
+        },
+        back: {
+            type: String,
+            required: true,
+        },
+        search: {
+            type: String,
+            required: true,
+        },
+        stop: {
+            type: String,
+            required: true,
+        },
+        endCall: {
+            type: String,
+            required: true,
+        },
+        nextChat: {
+            type: String,
+            required: true,
+        },
+        report: {
             type: String,
             required: true,
         }

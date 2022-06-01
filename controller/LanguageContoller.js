@@ -22,13 +22,17 @@ class LanguageContoller {
             const tokenPayload = tokenService.decodeToken(token)
             if (!tokenPayload.role == 'MODERATOR') return res.status(403).json({ message: 'Нет доступа' })
 
-            const { languageTitle, languageHeader, innerHeader } = req.body
-            const { advantages, features, contactsBlock, rulesBlock } = req.body
-            
+            const { languageTitle, languageHeader, innerHeader, languageMeta } = req.body
+            const { advantages, features, contactsBlock, rulesBlock, chatBlock } = req.body
+            const id = req.body.id
+
             const language = new Language({
                 title: languageTitle.title,
                 short: languageTitle.short,
                 name: languageTitle.name,
+                chatTitle: languageMeta.chatTitle,
+                description: languageMeta.description,
+                keywords: languageMeta.keywords,
                 header: {
                     contacts: languageHeader.contacts,
                     rules: languageHeader.rules,
@@ -63,12 +67,31 @@ class LanguageContoller {
                     message: contactsBlock.message,
                     send: contactsBlock.send,
                 },
-                rulesBlock: { content: rulesBlock.content }
+                rulesBlock: { content: rulesBlock.content },
+                chatBlock: {
+                    exit: chatBlock.exit,
+                    userGender: chatBlock.userGender,
+                    penPalGender: chatBlock.penPalGender,
+                    any: chatBlock.any,
+                    male: chatBlock.male,
+                    female: chatBlock.female,
+                    back: chatBlock.back,
+                    search: chatBlock.search,
+                    stop: chatBlock.stop,
+                    endCall: chatBlock.endCall,
+                    nextChat: chatBlock.nextChat,
+                    report: chatBlock.report
+                }
             })
 
             await language.save()
                 .then(() => {
-                    return res.status(201).json({ message: 'Язык создан' })
+                    if (id) {
+                        Language.findOne({ _id: id }).remove( () => {
+                            return res.status(201).json({ message: 'Язык изменен' })
+                        })
+                    }
+                    else return res.status(201).json({ message: 'Язык создан' })
                 })
                 .catch((err) => {
                     console.log(err)

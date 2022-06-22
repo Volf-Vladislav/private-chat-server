@@ -12,7 +12,7 @@ const languageRouter = require('./router/LanguageRouter')
 
 const app = express()
 app.use(cors())
-const PORT = process.env.PORT || 443
+const PORT = process.env.PORT || 8080
 
 app.engine('html', cons.swig)
 app.set('views', path.join(__dirname, 'view/html'))
